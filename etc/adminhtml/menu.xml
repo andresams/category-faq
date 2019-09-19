@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Prestafy_Faq::management" title="FAQ" translate="title" module="Prestafy_Faq" sortOrder="30"
+             parent="Magento_Backend::content" resource="Magento_Backend::design"/>
+
+        <add id="Prestafy_Faq::questions" title="Questions" translate="title" module="Prestafy_Faq" sortOrder="0"
+             parent="Prestafy_Faq::management" action="faq/question/index" resource="Magento_Config::config_design"/>
+
+        <add id="Prestafy_Faq::categories" title="Categories" translate="title" module="Prestafy_Faq" sortOrder="10"
+             parent="Prestafy_Faq::management" action="faq/category/index" resource="Magento_Config::config_design"/>
+    </menu>
+</config>
