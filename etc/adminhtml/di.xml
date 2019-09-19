@@ -6,6 +6,9 @@
                 <item name="faq_category_listing_data_source" xsi:type="string">
                     Prestafy\Faq\Model\ResourceModel\Category\Grid\Collection
                 </item>
+                <item name="faq_question_listing_data_source" xsi:type="string">
+                    Prestafy\Faq\Model\ResourceModel\Question\Grid\Collection
+                </item>
             </argument>
         </arguments>
     </type>
@@ -14,6 +17,13 @@
         <arguments>
             <argument name="mainTable" xsi:type="string">prestafy_faq_category</argument>
             <argument name="resourceModel" xsi:type="string">Prestafy\Faq\Model\ResourceModel\Category</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Prestafy\Faq\Model\ResourceModel\Question\Grid\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">prestafy_faq_question</argument>
+            <argument name="resourceModel" xsi:type="string">Prestafy\Faq\Model\ResourceModel\Question</argument>
         </arguments>
     </virtualType>
     <virtualType name="Prestafy\Faq\Ui\DataProvider\CategoryDataProvider"
