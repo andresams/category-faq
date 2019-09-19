@@ -50,13 +50,16 @@ class InstallData implements InstallDataInterface
          * Add Default Category
          */
         $data = [
-            'name'        => 'Default',
-            'description' => 'When there is only 1 category',
-            'position'    => 0,
+            'name'        => __('Default'),
+            'description' => __('When there is only 1 active category, only its questions will be displayed.'),
+            'sort_order'  => 0,
             'status'      => 1,
             'category_id' => 1
         ];
 
+        /**
+         * TODO: Replace Model with Service Contract Persistence Operations
+         */
         $category = $this->_categoryFactory->create();
         $category->addData($data)->save();
 
@@ -64,11 +67,16 @@ class InstallData implements InstallDataInterface
          * Add Sample Question
          */
         $data = [
-            'title'  => 'What should I use this module for?',
-            'answer' => 'Category FAQ module was designed as a simple solution to provide information for your customers',
-            'status' => 1
+            'title'  => __('What should I use this module for?'),
+            'answer' => __('Category FAQ module was designed as a simple solution to provide information for your customers'),
+            'status' => 1,
+            'category_id' => 1,
+            'sort_order'  => 0
         ];
 
+        /**
+         * TODO: Replace Model with Service Contract Persistence Operations
+         */
         $question = $this->_questionFactory->create();
         $question->addData($data)->save();
     }

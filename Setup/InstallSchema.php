@@ -57,7 +57,7 @@ class InstallSchema implements InstallSchemaInterface
             ['nullable' => true],
             'Category name'
         )->addColumn(
-            'position',
+            'sort_order',
             Table::TYPE_INTEGER,
             null,
             ['nullable' => true],
@@ -124,7 +124,7 @@ class InstallSchema implements InstallSchemaInterface
             ['nullable' => true],
             'Question Display Status'
         )->addColumn(
-            'position',
+            'sort_order',
             Table::TYPE_INTEGER,
             null,
             ['nullable' => true],
