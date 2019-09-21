@@ -32,7 +32,8 @@ class InstallSchema implements InstallSchemaInterface
         /**
          * Create Category Table
          */
-        $fullTextIntex = ['name', 'description'];
+        $categoryFullTextIndex = ['name', 'description'];
+        $questionFullTextIndex = ['title', 'answer'];
         $categoryTableName = $setup->getTable(Category::TABLE_NAME);
         $questionTableName = $setup->getTable(Question::TABLE_NAME);
 
@@ -83,14 +84,19 @@ class InstallSchema implements InstallSchemaInterface
         )->setComment('FAQ Categories Table');
 
         $setup->getConnection()->createTable($table);
+
+        /**
+         * Add Full Text Index to enable the "Search by Keyword"
+         * in the Category Listing Ui Component
+         */
         $setup->getConnection()->addIndex(
             $categoryTableName,
             $setup->getIdxName(
                 $categoryTableName,
-                $fullTextIntex,
+                $categoryFullTextIndex,
                 \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_FULLTEXT
             ),
-            $fullTextIntex,
+            $categoryFullTextIndex,
             \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_FULLTEXT
         );
 
@@ -161,6 +167,21 @@ class InstallSchema implements InstallSchemaInterface
         )->setComment('FAQ Questions Table');
 
         $setup->getConnection()->createTable($table);
+
+        /**
+         * Add Full Text Index to enable the "Search by Keyword"
+         * in the Question Listing Ui Component
+         */
+        $setup->getConnection()->addIndex(
+            $questionTableName,
+            $setup->getIdxName(
+                $questionTableName,
+                $questionFullTextIndex,
+                \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_FULLTEXT
+            ),
+            $questionFullTextIndex,
+            \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_FULLTEXT
+        );
         $setup->endSetup();
     }
 }
