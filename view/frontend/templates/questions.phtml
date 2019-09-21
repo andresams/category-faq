@@ -10,7 +10,9 @@ $categoryName = false;
     <?php endif; ?>
     <div class="accordion">
     <?php $categoryName = $question->getData('categoryName'); ?>
+    <?php if ($block::MAIN_LABEL != $categoryName) : ?>
     <h2><?php echo $categoryName; ?></h2>
+    <?php endif; ?>
     <?php endif; ?>
         <div class="accordion-item">
             <a><?php echo $question->getTitle(); ?></a>

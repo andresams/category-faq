@@ -16,6 +16,11 @@ use Prestafy\Faq\Model\ResourceModel\Question\CollectionFactory;
 
 class Questions extends Template
 {
+    /*
+    * This label won't be displayed in the frontend block
+    */
+    const MAIN_LABEL = 'Default';
+
     /**
      * @var CollectionFactory
      */
