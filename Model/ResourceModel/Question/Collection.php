@@ -12,8 +12,8 @@ namespace Prestafy\Faq\Model\ResourceModel\Question;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 use Prestafy\Faq\Model\Question;
-use Prestafy\Faq\Model\ResourceModel\Category;
 use Prestafy\Faq\Model\ResourceModel\Question as QuestionResource;
+use Prestafy\Faq\Model\ResourceModel\Category as CategoryResourceModel;
 
 class Collection extends AbstractCollection
 {
@@ -28,25 +28,25 @@ class Collection extends AbstractCollection
     }
 
     /**
-     * Initialize Select Object
+     * Initialize select object
      *
-     * @return $this|AbstractCollection|void
+     * @return Collection
      */
     protected function _initSelect()
     {
         parent::_initSelect();
 
         $this->getSelect()->joinLeft(
-            ['categories' => $this->getTable(Category::TABLE_NAME)],
+            ['categories' => $this->getTable(CategoryResourceModel::TABLE_NAME)],
             'main_table.category_id = categories.id',
-            ['name', 'id']
+            ['name']
         )->columns(
             [
-                'categoryname' => 'categories.name',
-                'id'           => 'main_table.id',
-                'created_at'   => 'main_table.created_at',
-                'updated_at'   => 'main_table.updated_at',
-                'status'       => 'main_table.status'
+                'categoryName' => 'categories.name',
+                'id' => 'main_table.id',
+                'created_at' => 'main_table.created_at',
+                'updated_at' => 'main_table.updated_at',
+                'status' => 'main_table.status'
             ]
         );
 

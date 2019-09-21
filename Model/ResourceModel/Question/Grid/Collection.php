@@ -69,7 +69,12 @@ class Collection extends SearchResult
             'main_table.category_id = categories.id',
             ['name']
         )->columns(
-            ['categoryName' => 'categories.name']
+            [
+                'categoryName' => 'categories.name',
+                'id' => 'main_table.id',
+                'created_at' => 'main_table.created_at',
+                'updated_at' => 'main_table.updated_at',
+                'status' => 'main_table.status']
         );
 
         return $this;
