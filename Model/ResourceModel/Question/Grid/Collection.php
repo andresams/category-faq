@@ -64,6 +64,7 @@ class Collection extends SearchResult
     {
         parent::_initSelect();
 
+        $this->addFilterToMap('id', 'main_table.id');
         $this->getSelect()->joinLeft(
             ['categories' => $this->getTable(CategoryResourceModel::TABLE_NAME)],
             'main_table.category_id = categories.id',
