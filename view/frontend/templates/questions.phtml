@@ -1,0 +1,35 @@
+<?php
+/** @var $block \Prestafy\Faq\Block\Questions */
+$categoryName = false;
+?>
+<div class="container">
+    <?php foreach ($block->getItems() as $question): ?>
+    <?php if ($question->getData('categoryName') !== $categoryName) : ?>
+    <?php if ($categoryName != false): ?>
+    <?php echo '</div>'; ?>
+    <?php endif; ?>
+    <div class="accordion">
+    <?php $categoryName = $question->getData('categoryName'); ?>
+    <h2><?php echo $categoryName; ?></h2>
+    <?php endif; ?>
+        <div class="accordion-item">
+            <a><?php echo $question->getTitle(); ?></a>
+            <div class="content">
+                <?php echo $question->getAnswer(); ?>
+            </div>
+        </div>
+    <?php endforeach; ?>
+    </div>
+</div>
+<script>
+    require(['jquery', 'jquery/ui'], function($) {
+        items = document.querySelectorAll(".accordion a");
+
+        function toggleAccordion(){
+            this.classList.toggle('active');
+            this.nextElementSibling.classList.toggle('active');
+        }
+
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+    });
+</script>

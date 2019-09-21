@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-right"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <head>
+        <title>FAQ — Frequently Asked Questions</title>
+        <css src="Prestafy_Faq::css/accordion.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block template="questions.phtml" class="Prestafy\Faq\Block\Questions"
+                   name="faq_block_questions"/>
+        </referenceContainer>
+    </body>
+</page>
