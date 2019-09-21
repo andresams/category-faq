@@ -79,9 +79,11 @@
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Answer</item>
-                    <item name="formElement" xsi:type="string">textarea</item>
+                    <item name="formElement" xsi:type="string">wysiwyg</item>
+                    <item name="wysiwyg" xsi:type="boolean">true</item>
                     <item name="source" xsi:type="string">question</item>
                     <item name="dataScope" xsi:type="string">answer</item>
+                    <item name="rows" xsi:type="number">5</item>
                 </item>
             </argument>
         </field>
