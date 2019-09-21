@@ -19,17 +19,21 @@
             <argument name="resourceModel" xsi:type="string">Prestafy\Faq\Model\ResourceModel\Category</argument>
         </arguments>
     </virtualType>
-    <virtualType name="Prestafy\Faq\Model\ResourceModel\Question\Grid\Collection"
-                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
-        <arguments>
-            <argument name="mainTable" xsi:type="string">prestafy_faq_question</argument>
-            <argument name="resourceModel" xsi:type="string">Prestafy\Faq\Model\ResourceModel\Question</argument>
-        </arguments>
-    </virtualType>
     <virtualType name="Prestafy\Faq\Ui\DataProvider\CategoryDataProvider"
                  type="Prestafy\Faq\Ui\DataProvider\GenericFormDataProvider">
         <arguments>
-            <argument name="collection" xsi:type="object" shared="false">Prestafy\Faq\Model\ResourceModel\Category\Collection</argument>
+            <argument name="collection" xsi:type="object" shared="false">
+                Prestafy\Faq\Model\ResourceModel\Category\Collection
+            </argument>
+            <argument name="fieldset" xsi:type="string">general</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Prestafy\Faq\Ui\DataProvider\QuestionDataProvider"
+                 type="Prestafy\Faq\Ui\DataProvider\GenericFormDataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">
+                Prestafy\Faq\Model\ResourceModel\Question\Collection
+            </argument>
             <argument name="fieldset" xsi:type="string">general</argument>
         </arguments>
     </virtualType>
