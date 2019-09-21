@@ -38,6 +38,7 @@ class Questions extends Template
     public function getItems()
     {
         $questionCollection = $this->collectionFactory->create();
+        $questionCollection->addFieldToFilter('main_table.status', 1);
         $questionCollection->setOrder('categoryName', 'DESC');
 
         return $questionCollection->getItems();
