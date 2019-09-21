@@ -8,7 +8,7 @@ The management options can be found under Content > FAQ.
 
 ![FAQ Management Options](https://user-images.githubusercontent.com/9648056/65376934-7fd17680-dc7c-11e9-9b36-ad2de7ec0f7b.png)
 
-Add, edit, delete, disable or anable Categories...
+Add, edit, delete, disable or enable Categories...
 
 ![Manage Categories](https://user-images.githubusercontent.com/9648056/65377035-844a5f00-dc7d-11e9-8a5a-e4cce8af6b03.png)
 
