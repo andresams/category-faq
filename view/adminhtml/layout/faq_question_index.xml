@@ -3,7 +3,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="styles"/>
     <head>
-        <title>Frequently Asked Questions</title>
+        <title translate="true">Frequently Asked Questions</title>
     </head>
     <body>
         <referenceContainer name="content">

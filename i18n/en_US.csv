@@ -1,0 +1,41 @@
+"Save Category","Save Category"
+"Save Question","Save Question"
+"A total of %1 categories have been disabled.","A total of %1 categories have been disabled."
+"A total of %1 categories have been enabled.","A total of %1 categories have been enabled."
+"A total of %1 categories have been deleted.","A total of %1 categories have been deleted."
+"Successfully saved the item.","Successfully saved the item."
+"A total of %1 questions have been deleted.","A total of %1 questions have been deleted."
+"A total of %1 questions have been disabled.","A total of %1 questions have been disabled."
+"A total of %1 questions have been enabled.","A total of %1 questions have been enabled."
+"Successfully saved the question.","Successfully saved the question."
+Disabled,Disabled
+Enabled,Enabled
+FAQ,FAQ
+Default,Default
+"When there is only 1 active category, only its questions will be displayed.","When there is only 1 active category, only its questions will be displayed."
+"What should I use this module for?","What should I use this module for?"
+"Category FAQ module was designed as a simple solution to provide information for your customers","Category FAQ module was designed as a simple solution to provide information for your customers"
+Edit,Edit
+Questions,Questions
+Categories,Categories
+"Frequently Asked Questions","Frequently Asked Questions"
+"Category Information","Category Information"
+Details,Details
+Status,Status
+Name,Name
+Description,Description
+"Add Category","Add Category"
+"Are you sure to delete selected FAQ categories?","Are you sure to delete selected FAQ categories?"
+"Delete items","Delete items"
+Delete,Delete
+Enable,Enable
+Disable,Disable
+ID,ID
+Created,Created
+Modified,Modified
+"Question Information","Question Information"
+Title,Title
+Answer,Answer
+Category,Category
+"Add Question","Add Question"
+"Are you sure to delete selected FAQ questions?","Are you sure to delete selected FAQ questions?"

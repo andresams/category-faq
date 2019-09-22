@@ -3,7 +3,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="styles"/>
     <head>
-        <title>FAQ — Frequently Asked Questions</title>
+        <title translate="true">FAQ — Frequently Asked Questions</title>
         <css src="Prestafy_Faq::css/accordion.css"/>
     </head>
     <body>
