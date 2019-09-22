@@ -16,7 +16,7 @@ use Magento\Framework\Controller\ResultFactory;
 use Magento\Ui\Component\MassAction\Filter;
 use Prestafy\Faq\Model\ResourceModel\Category\CollectionFactory;
 
-class Massdelete extends \Magento\Backend\App\Action
+class MassDelete extends \Magento\Backend\App\Action
 {
     /**
      * @var Filter
