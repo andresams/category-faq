@@ -1,0 +1,47 @@
+"Save Category","Salvar"
+"Save Question","Salvar"
+"A total of %1 categories have been deleted.","%1 categoria(s) deletada(s) com sucesso."
+"A total of %1 categories have been disabled.","%1 categoria(s) desativada(s) com sucesso."
+"A total of %1 categories have been enabled.","%1 categoria(s) ativada(s) com sucesso."
+"Successfully saved the item.","Item salvo com sucesso!"
+"A total of %1 questions have been deleted.","%1 pergunta(s) deletada(s) com sucesso."
+"A total of %1 questions have been disabled.","%1 pergunta(s) desativada(s) com sucesso."
+"A total of %1 questions have been enabled.","%1 pergunta(s) ativada(s) com sucesso."
+"Successfully saved the question.","Pergunta salva com sucesso!"
+Disabled,Desativada
+Enabled,Ativada
+"FAQ","Perguntas Frequentes"
+Default,Padrão
+"When there is only 1 active category, only its questions will be displayed.","Quando apenas 1 categoria estiver ativada, somente suas perguntas serão exibidas (sem mostrar o título da categoria)."
+"What should I use this module for?","Para quê eu devo usar este módulo?"
+"Category FAQ module was designed as a simple solution to provide information for your customers","FAQ com Categorias é um módulo desenvolvido como uma solução simples para fornecer informação aos seus consumidores."
+Edit,Editar
+Questions,Perguntas
+Categories,Categorias
+"New Category","Adicionar Categoria"
+"Edit FAQ Category","Editar Categoria"
+"FAQ Categories","Categorias de Perguntas Frequentes"
+"Add New Question","Adicionar Pergunta"
+"Edit Question","Editar Pergunta"
+"Frequently Asked Questions","Perguntas Frequentes"
+"Category Information","Informação da Categoria"
+Details,Detalhes
+Status,Status
+Name,Nome
+Description,Descrição
+"Add Category","Adicionar Categoria"
+"Are you sure to delete selected FAQ categories?","Tem certeza de que deseja deletar as categorias selecionadas?"
+"Delete items","Deletar itens"
+Delete,Deletar
+Enable,Ativar
+Disable,Desativar
+ID,ID
+Created,"Criada em"
+Modified,"Modificada em"
+"Question Information","Informaçõe sobre a Pergunta"
+Title,"Título"
+Answer,"Resposta"
+Category,Categoria
+"Add Question","Adicionar Pergunta"
+"Are you sure to delete selected FAQ questions?","Tem certeza que deseja deletar as perguntas selecionadas?"
+"FAQ — Frequently Asked Questions","FAQ — Perguntas feitas com frequência"
