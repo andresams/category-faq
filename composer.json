@@ -1,5 +1,5 @@
 {
-  "name": "andresa/category-faq",
+  "name": "prestafy/category-faq",
   "description": "FAQ with Categories Extension for Magento 2.3",
   "version": "0.0.1",
   "type": "magento2-module",
@@ -12,8 +12,8 @@
   ],
   "repositories": {
     "magento": {
-      "type": "composer",
-      "url": "https://repo.magento.com/"
+      "type": "git",
+      "url": "git@github.com:andresams/category-faq.git"
     }
   },
   "require": {
@@ -39,7 +39,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "Andresa\\Faq\\": ""
+      "Prestafy\\Faq\\": ""
     }
   }
 }
