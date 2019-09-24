@@ -26,7 +26,7 @@ A new menu item will be added to the top menu. This item is linked to a page tha
 
 ```bash
 composer config repositories.andresams git git@github.com:andresams/category-faq.git
-composer require andresams/category-faq
+composer require prestafy/category-faq
 ```
 
 ### Modman
