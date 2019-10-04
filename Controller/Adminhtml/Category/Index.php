@@ -15,8 +15,9 @@ use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\Result\Raw;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Controller\ResultInterface;
+use Magento\Framework\App\Action\HttpGetActionInterface as HttpGetActionInterface;
 
-class Index extends \Magento\Backend\App\Action
+class Index extends \Magento\Backend\App\Action implements HttpGetActionInterface
 {
     /**
      * Execute controller action

@@ -11,12 +11,18 @@
 
 namespace Prestafy\Faq\Controller\Adminhtml\Category;
 
+use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Ui\Component\MassAction\Filter;
 use Prestafy\Faq\Model\ResourceModel\Category\CollectionFactory;
+use Magento\Framework\App\Action\HttpPostActionInterface;
 
-class MassDisable extends \Magento\Backend\App\Action
+/**
+ * Class MassDisable
+ * @package Prestafy\Faq\Controller\Adminhtml\Category
+ */
+class MassDisable extends Action implements HttpPostActionInterface
 {
     /**
      * @var Filter

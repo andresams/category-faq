@@ -14,8 +14,13 @@ namespace Prestafy\Faq\Controller\Adminhtml\Question;
 use Magento\Backend\App\Action;
 use Magento\Backend\Model\Session;
 use Prestafy\Faq\Model\QuestionFactory;
+use Magento\Framework\App\Action\HttpPostActionInterface;
 
-class Save extends \Magento\Backend\App\Action
+/**
+ * Class Save
+ * @package Prestafy\Faq\Controller\Adminhtml\Question
+ */
+class Save extends Action implements HttpPostActionInterface
 {
     private $collectionFactory;
 
@@ -52,9 +57,9 @@ class Save extends \Magento\Backend\App\Action
 
                 if (!empty($data['id'])) {
                     return $resultRedirect->setPath('*/*/edit', ['id' => $data['id']]);
-                } else {
-                    return $resultRedirect->setPath('*/*/add');
                 }
+
+                return $resultRedirect->setPath('*/*/add');
             }
         }
 

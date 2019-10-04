@@ -11,12 +11,18 @@
 
 namespace Prestafy\Faq\Controller\Adminhtml\Question;
 
+use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Ui\Component\MassAction\Filter;
 use Prestafy\Faq\Model\ResourceModel\Question\CollectionFactory;
+use Magento\Framework\App\Action\HttpPostActionInterface;
 
-class MassDelete extends \Magento\Backend\App\Action
+/**
+ * Class MassDelete
+ * @package Prestafy\Faq\Controller\Adminhtml\Question
+ */
+class MassDelete extends Action implements HttpPostActionInterface
 {
     /**
      * @var Filter

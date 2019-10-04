@@ -12,8 +12,13 @@
 namespace Prestafy\Faq\Controller\Adminhtml\Category;
 
 use Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\App\Action\HttpGetActionInterface as HttpGetActionInterface;
 
-class Edit extends \Magento\Backend\App\Action
+/**
+ * Class Edit
+ * @package Prestafy\Faq\Controller\Adminhtml\Category
+ */
+class Edit extends \Magento\Backend\App\Action implements HttpGetActionInterface
 {
     public function execute()
     {
