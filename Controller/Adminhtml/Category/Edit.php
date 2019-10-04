@@ -12,7 +12,7 @@
 namespace Prestafy\Faq\Controller\Adminhtml\Category;
 
 use Magento\Framework\Controller\ResultFactory;
-use Magento\Framework\App\Action\HttpGetActionInterface as HttpGetActionInterface;
+use Magento\Framework\App\Action\HttpGetActionInterface;
 
 /**
  * Class Edit
