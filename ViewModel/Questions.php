@@ -1,6 +1,6 @@
 <?php
 /**
- * A block that displays a list of questions
+ * A View Model that displays a list of questions
  *
  * @category   Prestafy
  * @package    Prestafy_Faq
@@ -8,13 +8,16 @@
  * @copyright  Copyright (c) 2019 Prestafy eCommerce Solutions (https://www.prestafy.com.br)
  * @license    http://opensource.org/licenses/BSD-2-Clause Simplified BSD License
  */
+namespace Prestafy\Faq\ViewModel;
 
-namespace Prestafy\Faq\Block;
-
-use Magento\Framework\View\Element\Template;
+use Magento\Framework\View\Element\Block\ArgumentInterface;
 use Prestafy\Faq\Model\ResourceModel\Question\CollectionFactory;
 
-class Questions extends Template
+/**
+ * Class Questions
+ * @package Prestafy\Faq\ViewModel
+ */
+class Questions implements ArgumentInterface
 {
     /*
     * This label won't be displayed in the frontend block
@@ -26,12 +29,13 @@ class Questions extends Template
      */
     protected $collectionFactory;
 
+    /**
+     * Questions constructor.
+     * @param CollectionFactory $collectionFactory
+     */
     public function __construct(
-        Template\Context $context,
-        CollectionFactory $collectionFactory,
-        array $data = []
+        CollectionFactory $collectionFactory
     ) {
-        parent::__construct($context, $data);
         $this->collectionFactory = $collectionFactory;
     }
 
