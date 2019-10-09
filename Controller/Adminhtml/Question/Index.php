@@ -11,10 +11,16 @@
 
 namespace Prestafy\Faq\Controller\Adminhtml\Question;
 
+use Magento\Backend\App\Action;
 use Magento\Framework\Controller\Result\Raw;
 use Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\App\Action\HttpGetActionInterface;
 
-class Index extends \Magento\Backend\App\Action
+/**
+ * Class Index
+ * @package Prestafy\Faq\Controller\Adminhtml\Question
+ */
+class Index extends Action implements HttpGetActionInterface
 {
     public function execute()
     {

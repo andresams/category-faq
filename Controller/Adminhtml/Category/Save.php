@@ -17,10 +17,17 @@ use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\Result\Redirect;
 use Magento\Framework\Controller\ResultInterface;
 use Prestafy\Faq\Model\CategoryFactory;
+use Magento\Framework\App\Action\HttpPostActionInterface;
 
-class Save extends \Magento\Backend\App\Action
+/**
+ * Class Save
+ * @package Prestafy\Faq\Controller\Adminhtml\Category
+ */
+class Save extends Action implements HttpPostActionInterface
 {
-    /** @var CategoryFactory */
+    /**
+     * @var CategoryFactory
+     */
     private $categoryFactory;
 
     /**
@@ -67,11 +74,12 @@ class Save extends \Magento\Backend\App\Action
             } catch (\Exception $e) {
                 $this->messageManager->addErrorMessage($e->getMessage());
                 $this->_objectManager->get(Session::class)->setFormData($data);
+
                 if (!empty($data['id'])) {
                     return $resultRedirect->setPath('*/*/edit', ['id' => $category->getId()]);
-                } else {
-                    return $resultRedirect->setPath('*/*/add');
                 }
+
+                return $resultRedirect->setPath('*/*/add');
             }
         }
         return $resultRedirect->setPath('faq/category/index');
