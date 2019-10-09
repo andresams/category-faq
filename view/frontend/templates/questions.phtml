@@ -1,26 +1,27 @@
 <?php
-/** @var $block \Prestafy\Faq\Block\Questions */
+/** @var $block \Prestafy\Faq\ViewModel\Questions */
+$block = $this->getQuestions();
 $categoryName = false;
 ?>
 <div class="container">
     <?php foreach ($block->getItems() as $question): ?>
     <?php if ($question->getData('categoryName') !== $categoryName) : ?>
     <?php if ($categoryName != false): ?>
-    <?php echo '</div>'; ?>
+        <?php echo '</div>'; ?>
     <?php endif; ?>
     <div class="accordion">
-    <?php $categoryName = $question->getData('categoryName'); ?>
-    <?php if ($block::MAIN_LABEL != $categoryName) : ?>
-    <h2><?php echo $categoryName; ?></h2>
-    <?php endif; ?>
-    <?php endif; ?>
+        <?php $categoryName = $question->getData('categoryName'); ?>
+        <?php if ($block::MAIN_LABEL != $categoryName) : ?>
+            <h2><?php echo $categoryName; ?></h2>
+        <?php endif; ?>
+        <?php endif; ?>
         <div class="accordion-item">
             <a><?php echo $question->getTitle(); ?></a>
             <div class="content">
                 <?php echo $question->getAnswer(); ?>
             </div>
         </div>
-    <?php endforeach; ?>
+        <?php endforeach; ?>
     </div>
 </div>
 <script>

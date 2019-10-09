@@ -8,8 +8,13 @@
     </head>
     <body>
         <referenceContainer name="content">
-            <block template="questions.phtml" class="Prestafy\Faq\Block\Questions"
-                   name="faq_block_questions"/>
+            <block template="Prestafy_Faq::questions.phtml" class="Magento\Framework\View\Element\Template"
+                   name="faq_block_questions">
+                <arguments>
+                    <argument name="questions" xsi:type="object">
+                        Prestafy\Faq\ViewModel\Questions</argument>
+                </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>
